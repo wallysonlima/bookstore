@@ -10,7 +10,7 @@ class Database
 	private final String $host = "localhost";
 	private final String $dbName = "bookStore";
 	private final String $user = "root";
-	private final String $password = "Unesp2015&";
+	private final String $password = "";
 
 	function connection()
 	{
