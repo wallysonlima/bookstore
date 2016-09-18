@@ -7,10 +7,10 @@
 
 class Book
 {
-	private int $codBook;
-	private String $nameBook, $author, $synopsis, $subject, $year;
-	private float $price;
-	private int $numPages;
+	private $codBook;
+	private $nameBook, $author, $synopsis, $subject, $year;
+	private $price;
+	private $numPages;
 
 	public function Book($nameBook, $author, $synopsis, $subject, $year, $price, $numPages)
 	{

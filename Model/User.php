@@ -7,10 +7,10 @@
 
 class User
 {
-	private int $codUser;
-	private String $nameUser, $bornDate, $address, $state, $city, $district, $zipCode, $phone, $cpf, $email, $password;
+	private $codUser;
+	private $nameUser, $bornDate, $address, $state, $city, $district, $zipCode, $phone, $cpf, $email, $password, $userType;
 
-	public User($nameUser, $bornDate, $address, $state, $district, $zipCode, $phone, $cpf, $email, $password)
+	public User($nameUser, $bornDate, $address, $state, $district, $zipCode, $phone, $cpf, $email, $password, $userType)
 	{
 		$this->nameUser = $nameUser;
 		$this->bornDate = $bornDate;
@@ -22,6 +22,7 @@ class User
 		$this->cpf = $cpf;
 		$this->email = $email;
 		$this->password = $password;
+		$this->userType = $userType;
 	}
 }
 

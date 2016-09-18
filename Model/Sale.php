@@ -7,9 +7,9 @@
 
 class Sale
 {
-	private int $codSale, $installmentsNum;
-	private float $total, $deliveryPrice;
-	private String $deliveryType, $cardNum, $maturityDate, $securityCode, $holderName, $holderCpf, $bornDate;
+	private $codSale, $installmentsNum;
+	private $total, $deliveryPrice;
+	private $deliveryType, $cardNum, $maturityDate, $securityCode, $holderName, $holderCpf, $bornDate;
 
 	public Sale($total, $deliveryType, $deliveryPrice, $cardNum, $maturityDate, $securityCode, 
 		$installmentsNum, $holderName, $holderCpf, $bornDate)
