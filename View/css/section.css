@@ -1,0 +1,161 @@
+/*---------------center_content-------*/
+section
+{
+	width:821px;
+	height:auto;
+	padding:15px 0 30px 0;
+	background-color:#e9e5e2;
+	clear: both;
+	margin-top: -20px;
+}
+
+.logo
+{
+	padding:30px 0 0 0px;
+}
+
+
+.title
+{
+	width: auto;
+	padding:10px 0 10px 25px;
+	font-size:17px;
+	color:#2e2721;
+	font-weight:bold;
+}
+
+.title_news
+{
+	width: auto;
+	padding:0 0 0 35px;
+	font-size:22px;
+	color:#24a4b3;
+	background:url(../images/checked.gif) no-repeat left top;
+	margin:0 0 10px 0px;
+}
+
+.title_welcome
+{
+	width: auto;
+	padding:0 0 0 35px;
+	font-size:22px;
+	color:#24a4b3;
+	background:url(../images/checked.gif) no-repeat left top;
+	margin:0 0 10px 25px;
+}
+
+span.red
+{
+	font-weight:bold;
+	color:#da5b23;
+}
+
+span.orange
+{
+	font-weight:bold;
+	color:#da5b23;
+}
+
+.logo{
+	padding:30px 0 0 0px;
+}
+
+.welcome_box
+{
+	width:496px;
+	height:202px;
+	background:url(../images/welcome_box.gif) no-repeat center;
+	padding:0px;
+}
+
+.center_left
+{
+	width:500px;
+	float:left;
+	padding:10px 0 10px 10px;
+}
+
+.center_right
+{
+	width:300px;
+	float:left;
+	padding:10px 0 10px 0px;
+}
+
+.software_box
+{
+	width:187px;
+	height:200px;
+	padding:50px 0 15px 50px;
+}
+
+.features
+{
+	padding:30px 0 0 30px;
+}
+
+.news_box
+{
+	float:left;
+	width:auto;
+	border-bottom:1px #CCCCCC dashed;
+	padding:10px 0 8px 0;
+}
+
+.news_icon
+{
+	width:30px;
+	height:33px;
+	float:left;
+	background:url(../images/news_icon.gif) no-repeat center;
+}
+
+.news_content
+{
+	width:400px;
+	float:left;
+	text-align:justify;
+	line-height:20px;
+	padding:0 0 0 10px;
+}
+
+/* --------------------- Login Form --------------------- */
+.text_box
+{
+	width:278px;
+	height:144px;
+	padding:15px 0 0 10px;
+	background:url(../images/text_box.gif) no-repeat center;
+	background-position:0px 0px;
+}
+
+.login_form_row
+{
+	float:left;
+	padding:4px 0 4px 0;
+}
+
+label.login_label
+{
+	width:70px;
+	float:left;
+	padding:3px 5px 0 0;
+	color:#000;
+	text-align:right;
+}
+
+input.login_input
+{
+	width:153px;
+	height:18px;
+	float:left;
+	border:1px #9dbbc6 solid;
+	background-color:#fff;
+	color: #000;
+}
+
+input.login
+{
+	float:right;
+	padding:10px 20px 0 0;
+}

@@ -1,0 +1,59 @@
+footer
+{
+	width:821px;
+	height:50px;
+	clear:both;
+	color:#837d7b;
+}
+
+.left_footer
+{
+	float:left;
+	padding:20px 0 0 0;
+}
+
+footer a
+{
+	color:#837d7b;
+	padding:0 8px 0 8px;
+	text-decoration:none;
+}
+
+.right_footer
+{
+	float:right;
+	padding:15px 5px 0 0 ;
+}
+
+/* List */
+ul.list
+{
+	list-style:none;padding:0px;margin:0px;
+}
+
+ul.list li
+{
+	list-style:none;width: auto;height: auto;padding:0px; margin:8px 0 8px 0;
+}
+
+ul.list li a
+{
+	height:24px; width: auto; padding:0 0 0 15px; margin:0;color:#36322b;text-align:left;line-height:24px;
+	text-decoration:none;
+}
+
+ul.list li span
+{
+	height:24px; width:24px; display:block;padding:0px; margin:0px;color:#000;text-align:center; float:left; float:left; line-height:24px;
+	background:url(../images/bullet_list.gif) no-repeat left;
+}
+
+ul.list li a:hover
+{
+	text-decoration:underline;
+}
+
+.testimonials
+{
+	padding:20px 0 20px 0;
+}

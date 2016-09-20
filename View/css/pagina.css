@@ -1,0 +1,64 @@
+body
+{
+	background:url(../images/bg.gif) repeat #000000;
+	padding:0; 
+	font-family:arial, sans-serif;
+	font-size:12px;
+	margin:0px auto auto auto;
+	color:#36322b;
+}
+
+p
+{
+	padding:0px;
+	text-align:justify;
+	margin:0px;
+	line-height:20px;
+}
+
+p.welcome
+{
+	padding:30px 35px 0 35px;
+}
+
+p.testimonial
+{
+	font-style:italic;
+	padding:5px 15px 0 5px;
+}
+
+.clear
+{
+	clear:both;
+}
+
+a
+{
+	text-decoration:underline;
+}
+
+a.read_more
+{
+	display:block;
+	width:66px;
+	height:23px;
+	line-height:23px;
+	text-align:center;
+	color:#fff;
+	float:right;
+	margin:10px 40px 0 0;
+	padding:0 0 0 17px;
+	text-decoration:none;
+	font-size:12px;
+	background:url(../images/read_more_bg.gif) no-repeat center;
+}
+a:hover.read_more
+{
+	text-decoration:underline;
+}
+
+img.left_img
+{
+	float:left;
+	padding:3px 25px 3px 3px;
+}
