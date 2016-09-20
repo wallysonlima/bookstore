@@ -12,11 +12,11 @@ section
 	 float: center;
 	 width: 125px;
 	 height: 210px;
-   margin: 20px 20px 0px 20px;
+  	 margin: 20px 10px 0px 20px;
 }
 
 #embaixo a {
   float: left;
-  width: 110px;
-  margin-left: 5px;
+  width: 120px;
+  margin: 10px 25px 10px 0px;
 }

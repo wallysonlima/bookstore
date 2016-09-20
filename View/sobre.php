@@ -13,7 +13,7 @@ echo '
 	<link rel="stylesheet" type="text/css" href="css/nav.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/section.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/footer.css"></link>
-	<link rel="stylesheet" type="text/css" href="css/livro.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/sobre.css"></link>
 </head>
 <body>
 <div id="main_container">
