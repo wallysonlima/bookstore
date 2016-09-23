@@ -58,6 +58,19 @@ class UserDao
 		return $arrayUser;
 	}
 
+	public function getTypeUser($email, $password)
+	{
+		$sql = $con->prepare("Select (userType) FROM $tableName where email = ? and password = ?;");
+
+		$sql->bindValue(1, $email);
+		$sql->bindValue(2, $password);
+
+		$sql->execute();
+
+		$con = null;
+		return $sql->fetch();
+	}
+
 	public function alterUser($codUser, $nameUser, $bornDate, $address, $state, $district, $zipCode, $phone, $cpf, $email, $password, $userType)
 	{
 		$sql = $con->prepare("Update $tableName SET nameUser=?, bornDate=?, address=?, state=?, district=?, zipCode=?, phone=?, cpf=?, email=?, password=?, userType=? where codUser=?;");

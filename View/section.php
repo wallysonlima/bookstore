@@ -12,7 +12,7 @@ echo '
                  Ele é uma arte poderosa, fonte de entretenimento e conhecimento destinando-se a
                 educar ou doutrinar, pode tornar-se um modo eficiente de influenciar os cidadãos."
             </p>
-            <a href="sobre.html" class="read_more">Leia Mais</a>
+            <a href="sobre.php" class="read_more">Leia Mais</a>
         </div>
 
          <div class="features">
@@ -43,15 +43,17 @@ echo '
 
         <div class="text_box">
             <div class="title">Login Cliente/Administrador</div>
-                <div class="login_form_row">
-                    <label class="login_label">Email:</label><input type="text" name="name" class="login_input" />
-                </div>
+                <form method="POST">
+                    <div class="login_form_row">
+                        <label class="login_label">Email:</label><input type="text" name="name" class="login_input" id="email" />
+                    </div>
 
-                <div class="login_form_row">
-                  <label class="login_label">Senha:</label><input type="password" name="pass" class="login_input" />
-                </div>
-           
-                 <input type="image" src="images/login.gif" class="login" />
+                    <div class="login_form_row">
+                      <label class="login_label">Senha:</label><input type="password" name="pass" class="login_input" id="senha" />
+                    </div>
+               
+                    <input type="image" src="images/login.gif" class="login" id="login" />
+                 </form>
             </div>
 
             <div class="testimonials">

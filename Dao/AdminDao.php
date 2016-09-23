@@ -50,6 +50,19 @@ class AdminDao
 		return $arrayAdmin;
 	}
 
+	public function getTypeAdmin($login, $password)
+	{
+		$sql = $con->prepare("Select (userType) FROM $tableName where login = ? and password = ?;");
+
+		$sql->bindValue(1, $login);
+		$sql->bindValue(2, $password);
+
+		$sql->execute();
+
+		$con = null;
+		return $sql->fetch();
+	}
+
 	public function alterAdmin($codAdmin, $login, $password, $userType)
 	{
 		$sql = $con -> prepare("Update $tableName SET login=?, password=?, userType=? where codAdmin=?;");
