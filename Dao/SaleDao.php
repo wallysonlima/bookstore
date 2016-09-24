@@ -4,37 +4,27 @@
 	   Github: Wallyson Nunes
 	   Date: 01/09/2016
 	*/
-include("../Model/Database.php");
-include("../Model/Sale.php");
+include_once("/opt/lampp/htdocs/web/BookStore/Model/Database.php");
+include_once("/opt/lampp/htdocs/web/BookStore/Model/Sale.php");
 
 class SaleDao
 {
-	private $con = null;
-	private const $tableName = "sale";
+	private $con;
+	private $tableName;
 	
 	public function SaleDao()
 	{
-		$con = connection();
+		$db = new Database();
+		$this->con = $db->connection();
+		$this->tableName = "sale";
 	}
 
-	public function insertSale($total, $deliveryType, $deliveryPrice, $cardNum, $maturityDate, $securityCode, 
-			$installmentsNum, $holderName, $holderCpf, $bornDate)
+	public function insertSale($total)
 	{
-		$tableName = "sale";
-		$sql = $con->prepare("Insert Into $tableName (total, deliveryType, deliveryPrice, cardNum, maturityDate, securityCode, 
-			installmentsNum, holderName, holderCpf, bornDate) Values 
-			(?, ?, ?, ?, ?, ?, ?, ?, ?, ?);");
+		$sql = $this->con->prepare("Insert Into $this->tableName (total) Values 
+			(?);");
 
 		$sql->bindValue(1, $total);
-		$sql->bindValue(2, $deliveryType);
-		$sql->bindValue(3, $deliveryPrice);
-		$sql->bindValue(4, $cardNum);
-		$sql->bindValue(5, $maturityDate);
-		$sql->bindValue(6, $securityCode);
-		$sql->bindValue(7, $installmentsNum);
-		$sql->bindValue(8, $holderName);
-		$sql->bindValue(9, $holderCpf);
-		$sql->bindValue(10, $bornDate);
 
 		$sql->execute(); 
 
@@ -43,7 +33,7 @@ class SaleDao
 
 	public function selectSale($codSale)
 	{
-		$sql = $con->prepare("Select * FROM $tableName where codSale = ?;");
+		$sql = $this->con->prepare("Select * FROM $this->tableName where codSale = ?;");
 
 		$sql->bindValue(1, $codSale);
 		$sql->execute();
@@ -52,7 +42,7 @@ class SaleDao
 
 		while ( $row = $sql->fetch() )
 		{
-			$sale = new Sale($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7], $row[8], $row[9]);
+			$sale = new Sale($row[0]);
 			array_push($arraySale, $sale);
 		}
 
@@ -63,7 +53,7 @@ class SaleDao
 	public function alterSale($codSale, $total, $deliveryType, $deliveryPrice, $cardNum, $maturityDate, $securityCode, 
 			$installmentsNum, $holderName, $holderCpf, $bornDate)
 	{
-		$sql = $con->prepare("Update $tableName SET total=?, deliveryType=?, deliveryPrice=?, cardNum=?, maturityDate=?, securityCode=?, installmentsNum=?, holderName=?, holderCpf=?, bornDate=? where codSale=?;");
+		$sql = $this->con->prepare("Update $this->tableName SET total=?, deliveryType=?, deliveryPrice=?, cardNum=?, maturityDate=?, securityCode=?, installmentsNum=?, holderName=?, holderCpf=?, bornDate=? where codSale=?;");
 
 		$sql->bindValue(1, $total);
 		$sql->bindValue(2, $deliveryType);
@@ -84,7 +74,7 @@ class SaleDao
 
 	public function deleteSale($codSale)
 	{
-		$sql = $con->prepare("Delete FROM $tableName where codSale=?;");
+		$sql = $this->con->prepare("Delete FROM $this->tableName where codSale=?;");
 
 		$sql->bindValue(1, $codSale);
 		$sql->execute();

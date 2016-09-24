@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 echo '
 
@@ -14,6 +15,8 @@ echo '
 	<link rel="stylesheet" type="text/css" href="css/section.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/footer.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/1984.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="script/comprar.js"></script>
 </head>
 <body>
 <div id="main_container">
@@ -27,9 +30,8 @@ echo '
         		<li><a href="index.php">Home</a></li>
                 <li><a href="sobre.php">Sobre</a></li>
                 <li><a href="livros.php">Comprar Livros</a></li>
-				<li><a href="cadastrar.html">Cadastrar Usu&aacute;rio</a></li>
-                <li><a href="contato.html">Contato</a></li>
-				<li><a href="alterar_sessao.html">&Aacute;rea Restrita</a></li>
+				<li><a href="cadastrar.php">Cadastrar Usuário</a></li>
+				<li><a href="administrador.php">Área Restrita</a></li>
         	</ul>
     </nav>
 
@@ -42,9 +44,10 @@ echo '
 
 		<div class="center_right">
 					<table class="informacoes">
+						<form method="POST" name="comprar">
 						<tr>
 							<th>Nome: </th>
-							<td>1984</td>
+							<td><input type="text" name="nome" id="nome" value="1984"></input></td>
 						</tr>
 
 						<tr>
@@ -80,12 +83,18 @@ echo '
 							<th>Número de Páginas: </th>
 							<td>416</td>
 						</tr>
+
+						<tr>
+							<th></th>
+							<td>
+								<input type="button" value="Comprar" id="mil"></input>
+							</td>
+						</tr>
+						</form>
 					</table>
 			</div>
 
-			<div class="embaixo">
-				<a href="1984.php" class="read_more">Comprar</a>
-			</div>
+			
     </section>
 ';
 

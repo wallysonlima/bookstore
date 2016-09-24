@@ -2,6 +2,8 @@
 
 session_start();
 
+$_SESSION["tipo_usuario"] = "Comum";
+
 echo '
 
 <!DOCTYPE html>
@@ -11,7 +13,6 @@ echo '
 	<title>Bem Vindo a Livraria São Paulo</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="script/index.js"></script>
-	<script src="script/cadastrar.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/pagina.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/main_container.css"></link>
 	<link rel="stylesheet" type="text/css" href="css/header.css"></link>

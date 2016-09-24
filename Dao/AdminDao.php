@@ -5,22 +5,20 @@
 	   Date: 18/09/2016
 	*/
 
-include("../Model/Database.php");
-include("../Model/Admin.php");
+include_once("/opt/lampp/htdocs/web/BookStore/Model/Database.php");
+include_once("/opt/lampp/htdocs/web/BookStore/Model/Admin.php");
 
 class AdminDao
 {
-	private $con = null;
-	private const $tableName = "admin";
+	public function AdminDao(){}
 
-	public function AdminDao()
+	public function insertAdmin($login, $password, $userType )
 	{
-		$con = connection();
-	}
+		$tableName = "admin";
+		$db = new Database();
+		$con = $db -> connection();
 
-	public function insertAdmin( $login, $password, $userType )
-	{
-		$sql = $con -> prepare("Insert into $tableName ($login, $password, $userType) Values (?, ?, ?, ?);");
+		$sql = $con->prepare("Insert into $tableName ($login, $password, $userType) Values (?, ?, ?, ?);");
 
 		$sql -> bindValue(1, $login);
 		$sql -> bindValue(2, $password);
@@ -33,7 +31,11 @@ class AdminDao
 
 	public function selectAdmin($codAdmin)
 	{
-		$sql = $con -> prepare("Select * FROM $tableName where codAdmin= ?;");
+		$tableName = "admin";
+		$db = new Database();
+		$con = $db -> connection();
+		
+		$sql = $con->prepare("Select * FROM $tableName where codAdmin= ?;");
 
 		$sql -> bindValue(1, $codAdmin);
 		$sql -> execute();
@@ -52,6 +54,10 @@ class AdminDao
 
 	public function getTypeAdmin($login, $password)
 	{
+		$tableName = "admin";
+		$db = new Database();
+		$con = $db -> connection();
+		
 		$sql = $con->prepare("Select (userType) FROM $tableName where login = ? and password = ?;");
 
 		$sql->bindValue(1, $login);
@@ -65,7 +71,10 @@ class AdminDao
 
 	public function alterAdmin($codAdmin, $login, $password, $userType)
 	{
-		$sql = $con -> prepare("Update $tableName SET login=?, password=?, userType=? where codAdmin=?;");
+		$tableName = "admin";
+		$db = new Database();
+		$con = $db -> connection();
+		$sql = $con->prepare("Update $tableName SET login=?, password=?, userType=? where codAdmin=?;");
 
 		$sql -> bindValue(1, $login);
 		$sql -> bindValue(2, $password);
@@ -79,6 +88,9 @@ class AdminDao
 
 	public function deleteAdmin($codAdmin)
 	{
+		$tableName = "admin";
+		$db = new Database();
+		$con = $db -> connection();
 		$sql = $con -> prepare("Delete * from $tableName where codAdmin=?;");
 		$sql -> bindValue($codAdmin);
 		$sql -> execute();

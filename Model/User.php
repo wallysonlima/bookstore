@@ -8,21 +8,20 @@
 class User
 {
 	private $codUser;
-	private $nameUser, $bornDate, $address, $state, $city, $district, $zipCode, $phone, $cpf, $email, $password, $userType;
+	private $nameUser;
 
-	public User($nameUser, $bornDate, $address, $state, $district, $zipCode, $phone, $cpf, $email, $password, $userType)
+	public function User($codUser, $nameUser)
 	{
+		$this->codUser = $codUser;
 		$this->nameUser = $nameUser;
-		$this->bornDate = $bornDate;
-		$this->address = $address;
-		$this->state = $state;
-		$this->district = $district;
-		$this->zipCod = $zipCode;
-		$this->phone = $phone;
-		$this->cpf = $cpf;
-		$this->email = $email;
-		$this->password = $password;
-		$this->userType = $userType;
+	}
+
+	public function getCodUser() {
+		return $this->codUser;
+	}
+
+	public function getNameUser() {
+		return $this->nameUser;
 	}
 }
 

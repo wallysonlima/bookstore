@@ -7,17 +7,15 @@
 
 class Database
 {
-	private final String $host = "localhost";
-	private final String $dbName = "bookStore";
-	private final String $user = "root";
-	private final String $password = "";
+
+	function Database() {}
 
 	function connection()
 	{
 		try
 		{
 			// Create object PDO, and connect with the Mysql database
-			return $connection = new PDO("mysql:host=".$host.";dbname=".$dbName, $user, $password);	
+			return (new PDO("mysql:host=localhost;dbname=bookStore", "root", "Unesp2015&") );	
 		}
 		catch (PDOException $i)
 		{

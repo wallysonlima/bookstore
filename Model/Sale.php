@@ -11,7 +11,7 @@ class Sale
 	private $total, $deliveryPrice;
 	private $deliveryType, $cardNum, $maturityDate, $securityCode, $holderName, $holderCpf, $bornDate;
 
-	public Sale($total, $deliveryType, $deliveryPrice, $cardNum, $maturityDate, $securityCode, 
+	public function Sale($total, $deliveryType, $deliveryPrice, $cardNum, $maturityDate, $securityCode, 
 		$installmentsNum, $holderName, $holderCpf, $bornDate)
 	{
 		$this->total = $total;

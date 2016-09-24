@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 echo '
 
 <!DOCTYPE html>
@@ -28,8 +30,7 @@ echo '
                 <li><a href="sobre.php">Sobre</a></li>
                 <li class="selected"><a href="#">Comprar Livros</a></li>
 				<li><a href="cadastrar.php">Cadastrar Usuário</a></li>
-                <li><a href="contato.html">Contato</a></li>
-				<li><a href="alterar_sessao.html">&Aacute;rea Restrita</a></li>
+				<li><a href="administrador.php">Área Restrita</a></li>
         	</ul>
     </nav>
 

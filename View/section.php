@@ -43,17 +43,20 @@ echo '
 
         <div class="text_box">
             <div class="title">Login Cliente/Administrador</div>
-                <form method="POST">
+                <form method="POST" name="doLogin">
                     <div class="login_form_row">
-                        <label class="login_label">Email:</label><input type="text" name="name" class="login_input" id="email" />
+                        <label class="login_label">Email:</label><input type="text" name="email" class="login_input" id="email"></input>
                     </div>
 
                     <div class="login_form_row">
-                      <label class="login_label">Senha:</label><input type="password" name="pass" class="login_input" id="senha" />
+                      <label class="login_label">Senha:</label><input type="password" name="senha" class="login_input" id="senha"></input>
                     </div>
                
-                    <input type="image" src="images/login.gif" class="login" id="login" />
+                    <input type="button" value="Enviar" id="enviar"></input>
                  </form>
+
+                 <div id="resultado">
+                 </div>
             </div>
 
             <div class="testimonials">
