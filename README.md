@@ -5,3 +5,6 @@ It is a virtual bookstore where customers can register and buy books, will also 
 ![Print VirtualBookStore 02](https://github.com/WallysonNunes/VirtualBookStore/blob/master/Print/book.png)
 ![Print VirtualBookStore 03](https://github.com/WallysonNunes/VirtualBookStore/blob/master/Print/livro.png)
 ![Print VirtualBookStore 04](https://github.com/WallysonNunes/VirtualBookStore/blob/master/Print/administrador.png)
+
+<hr>
+<h5>Developed by Wallyson Lima</h5>
